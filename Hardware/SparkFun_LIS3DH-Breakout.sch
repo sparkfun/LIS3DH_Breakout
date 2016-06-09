@@ -9273,7 +9273,7 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 </classes>
 <parts>
 <part name="C1" library="SparkFun-Capacitors" deviceset="0.1UF" device="-0402-16V-10%" value="0.1uF"/>
-<part name="C3" library="SparkFun-Capacitors" deviceset="10UF" device="-0603-6.3V-20%" value="10uF"/>
+<part name="C2" library="SparkFun-Capacitors" deviceset="10UF" device="-0603-6.3V-20%" value="10uF"/>
 <part name="R1" library="SparkFun-Resistors" deviceset="4.7KOHM" device="-0603-1/10W-1%" value="4.7k"/>
 <part name="R2" library="SparkFun-Resistors" deviceset="4.7KOHM" device="-0603-1/10W-1%" value="4.7k"/>
 <part name="P+1" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
@@ -9334,7 +9334,7 @@ for I2C operation</text>
 </plain>
 <instances>
 <instance part="C1" gate="G$1" x="66.04" y="91.44"/>
-<instance part="C3" gate="G$1" x="76.2" y="91.44"/>
+<instance part="C2" gate="G$1" x="76.2" y="91.44"/>
 <instance part="R1" gate="G$1" x="139.7" y="119.38" rot="R90"/>
 <instance part="R2" gate="G$1" x="154.94" y="116.84" rot="R90"/>
 <instance part="P+1" gate="G$1" x="71.12" y="114.3"/>
@@ -9375,7 +9375,7 @@ for I2C operation</text>
 <junction x="76.2" y="86.36"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 <pinref part="C1" gate="G$1" pin="2"/>
-<pinref part="C3" gate="G$1" pin="2"/>
+<pinref part="C2" gate="G$1" pin="2"/>
 <pinref part="U2" gate="G$1" pin="GND@12"/>
 <wire x1="91.44" y1="86.36" x2="93.98" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="86.36" x2="91.44" y2="88.9" width="0.1524" layer="91"/>
@@ -9579,7 +9579,7 @@ for I2C operation</text>
 <wire x1="66.04" y1="96.52" x2="66.04" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="66.04" y1="101.6" x2="71.12" y2="101.6" width="0.1524" layer="91"/>
 <pinref part="P+1" gate="G$1" pin="VCC"/>
-<pinref part="C3" gate="G$1" pin="1"/>
+<pinref part="C2" gate="G$1" pin="1"/>
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="71.12" y1="111.76" x2="88.9" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="88.9" y1="111.76" x2="88.9" y2="109.22" width="0.1524" layer="91"/>
