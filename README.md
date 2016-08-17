@@ -31,8 +31,8 @@ Product Versions
 
 Version History
 ---------------
-* [vExxFxxZxxHxxLxxSxx](URL for tag specific to this version) - Description 
-* [vEyyFyyZyyHyyLyySyy](URL for tag specific to this version) - Description
+* [V_0.1](https://github.com/sparkfun/LIS3DH_Breakout/tree/V_0.1) - Prototype
+* [V_1.0](https://github.com/sparkfun/LIS3DH_Breakout/tree/V_1.0) - Release Version
 
 License Information
 -------------------

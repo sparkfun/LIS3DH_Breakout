@@ -9307,7 +9307,7 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <text x="182.88" y="88.9" size="1.778" layer="97">SA0 = 0: 0x18</text>
 <text x="182.88" y="86.36" size="1.778" layer="97">SA0 = 1: 0x19</text>
 <text x="177.8" y="96.52" size="1.778" layer="97">Jumper open by default, so SA0 = 1</text>
-<text x="236.22" y="7.62" size="2.54" layer="94">v01</text>
+<text x="236.22" y="7.62" size="2.54" layer="94">v10</text>
 <text x="173.228" y="11.176" size="2.54" layer="94">Marshall Taylor</text>
 <text x="5.08" y="177.8" size="3.81" layer="97">LIS3DH Breakout</text>
 <text x="150.368" y="138.938" size="1.778" layer="97" align="top-left">SJ2 pulls up the SCK and SDA lines
@@ -9446,21 +9446,21 @@ for I2C operation</text>
 <label x="134.62" y="96.52" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
-<wire x1="93.98" y1="22.86" x2="91.44" y2="22.86" width="0.1524" layer="91"/>
-<label x="91.44" y="22.86" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="J2" gate="G$1" pin="5"/>
-</segment>
-</net>
-<net name="INT1" class="0">
-<segment>
 <wire x1="93.98" y1="20.32" x2="91.44" y2="20.32" width="0.1524" layer="91"/>
 <label x="91.44" y="20.32" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="J2" gate="G$1" pin="6"/>
 </segment>
+</net>
+<net name="INT1" class="0">
 <segment>
 <wire x1="129.54" y1="99.06" x2="134.62" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="U2" gate="G$1" pin="INT1"/>
 <label x="134.62" y="99.06" size="1.27" layer="95" font="vector" xref="yes"/>
+</segment>
+<segment>
+<wire x1="93.98" y1="22.86" x2="91.44" y2="22.86" width="0.1524" layer="91"/>
+<label x="91.44" y="22.86" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="J2" gate="G$1" pin="5"/>
 </segment>
 </net>
 <net name="SA0" class="0">
@@ -9595,6 +9595,11 @@ for I2C operation</text>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="113,1,147.32,130.217,SJ2,,,,,"/>
+<approved hash="113,1,56.5573,22.7923,J1,,,,,"/>
+<approved hash="113,1,97.1973,25.3323,J2,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
