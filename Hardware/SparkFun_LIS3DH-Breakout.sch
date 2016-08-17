@@ -9299,6 +9299,7 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <part name="GND3" library="SparkFun" deviceset="GND" device=""/>
 <part name="J2" library="SparkFun-Connectors" deviceset="CONN_06" device="NO_SILK_FEMALE_PTH"/>
 <part name="GND4" library="SparkFun" deviceset="GND" device=""/>
+<part name="LOGO2" library="SparkFun-Aesthetics" deviceset="SFE_LOGO_FLAME" device=".1_INCH"/>
 </parts>
 <sheets>
 <sheet>
@@ -9361,6 +9362,7 @@ for I2C operation</text>
 <instance part="GND3" gate="1" x="40.64" y="12.7"/>
 <instance part="J2" gate="G$1" x="99.06" y="27.94" rot="R180"/>
 <instance part="GND4" gate="1" x="76.2" y="27.94"/>
+<instance part="LOGO2" gate="G$1" x="160.02" y="43.18"/>
 </instances>
 <busses>
 </busses>
