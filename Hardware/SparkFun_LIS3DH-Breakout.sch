@@ -9289,7 +9289,7 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <part name="SJ1" library="SparkFun" deviceset="SOLDERJUMPER" device="NO" value=""/>
 <part name="JP2" library="SparkFun" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
 <part name="JP6" library="SparkFun" deviceset="FIDUCIAL" device="UFIDUCIAL"/>
-<part name="U2" library="SparkFun-Sensors" deviceset="LIS3DH" device=""/>
+<part name="U1" library="SparkFun-Sensors" deviceset="LIS3DH" device=""/>
 <part name="SJ2" library="TestAperatures" deviceset="JUMPER-PAD-3-NC_BY_TRACE" device=""/>
 <part name="R4" library="SparkFun-Resistors" deviceset="10KOHM" device="-0603-1/10W-1%" value="10k"/>
 <part name="J1" library="SparkFun-Connectors" deviceset="CONN_06" device="NO_SILK_FEMALE_PTH"/>
@@ -9304,10 +9304,9 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <sheets>
 <sheet>
 <plain>
-<text x="180.34" y="91.44" size="1.778" layer="97">I2C Address:</text>
-<text x="182.88" y="88.9" size="1.778" layer="97">SA0 = 0: 0x18</text>
-<text x="182.88" y="86.36" size="1.778" layer="97">SA0 = 1: 0x19</text>
-<text x="177.8" y="96.52" size="1.778" layer="97">Jumper open by default, so SA0 = 1</text>
+<text x="180.34" y="93.98" size="1.778" layer="97" align="top-left">Closed: 0x18 (SA0 = 0)
+Open: 0x19 (SA0 = 1)</text>
+<text x="177.8" y="96.52" size="1.778" layer="97">Address selection jumper SJ1</text>
 <text x="236.22" y="7.62" size="2.54" layer="94">v10</text>
 <text x="173.228" y="11.176" size="2.54" layer="94">Marshall Taylor</text>
 <text x="5.08" y="177.8" size="3.81" layer="97">LIS3DH Breakout</text>
@@ -9322,7 +9321,7 @@ for I2C operation</text>
   SPI 4-WIRE:
     Jumpers SJ2 can be opened to 
     remove 4.7k load on the SPI lines.
-    Open SJ1
+    SJ1 must be open for SPI operation.
 </text>
 <wire x1="0" y1="66.04" x2="147.32" y2="66.04" width="0.1524" layer="97" style="longdash"/>
 <wire x1="147.32" y1="66.04" x2="147.32" y2="35.56" width="0.1524" layer="97" style="longdash"/>
@@ -9351,17 +9350,17 @@ for I2C operation</text>
 <instance part="SJ1" gate="1" x="172.72" y="96.52" rot="R90"/>
 <instance part="JP2" gate="G$1" x="228.6" y="30.48"/>
 <instance part="JP6" gate="G$1" x="233.68" y="30.48"/>
-<instance part="U2" gate="G$1" x="111.76" y="99.06"/>
+<instance part="U1" gate="G$1" x="111.76" y="99.06"/>
 <instance part="SJ2" gate="G$1" x="147.32" y="129.54" rot="R270"/>
 <instance part="R4" gate="G$1" x="132.08" y="129.54" rot="R90"/>
-<instance part="J1" gate="G$1" x="58.42" y="25.4" rot="R180"/>
+<instance part="J1" gate="G$1" x="63.5" y="30.48" rot="MR0"/>
 <instance part="FRAME2" gate="G$1" x="0" y="0"/>
 <instance part="FRAME2" gate="V" x="147.32" y="0"/>
 <instance part="LOGO1" gate="G$1" x="172.72" y="43.18"/>
-<instance part="SUPPLY1" gate="G$1" x="38.1" y="35.56"/>
-<instance part="GND3" gate="1" x="40.64" y="12.7"/>
-<instance part="J2" gate="G$1" x="99.06" y="27.94" rot="R180"/>
-<instance part="GND4" gate="1" x="76.2" y="27.94"/>
+<instance part="SUPPLY1" gate="G$1" x="45.72" y="40.64"/>
+<instance part="GND3" gate="1" x="45.72" y="20.32"/>
+<instance part="J2" gate="G$1" x="99.06" y="30.48" rot="MR0"/>
+<instance part="GND4" gate="1" x="91.44" y="20.32"/>
 <instance part="LOGO2" gate="G$1" x="160.02" y="43.18"/>
 </instances>
 <busses>
@@ -9378,13 +9377,13 @@ for I2C operation</text>
 <pinref part="GND1" gate="1" pin="GND"/>
 <pinref part="C1" gate="G$1" pin="2"/>
 <pinref part="C2" gate="G$1" pin="2"/>
-<pinref part="U2" gate="G$1" pin="GND@12"/>
+<pinref part="U1" gate="G$1" pin="GND@12"/>
 <wire x1="91.44" y1="86.36" x2="93.98" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="86.36" x2="91.44" y2="88.9" width="0.1524" layer="91"/>
-<pinref part="U2" gate="G$1" pin="GND@5"/>
+<pinref part="U1" gate="G$1" pin="GND@5"/>
 <wire x1="91.44" y1="88.9" x2="93.98" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="88.9" x2="91.44" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="U2" gate="G$1" pin="RES"/>
+<pinref part="U1" gate="G$1" pin="RES"/>
 <wire x1="91.44" y1="93.98" x2="93.98" y2="93.98" width="0.1524" layer="91"/>
 <junction x="91.44" y="88.9"/>
 <junction x="91.44" y="86.36"/>
@@ -9397,16 +9396,16 @@ for I2C operation</text>
 <pinref part="SJ1" gate="1" pin="1"/>
 </segment>
 <segment>
-<wire x1="53.34" y1="30.48" x2="40.64" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="25.4" x2="45.72" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="J1" gate="G$1" pin="1"/>
 <pinref part="GND3" gate="1" pin="GND"/>
-<wire x1="40.64" y1="15.24" x2="40.64" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="22.86" x2="45.72" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="J2" gate="G$1" pin="1"/>
-<wire x1="93.98" y1="33.02" x2="76.2" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="25.4" x2="91.44" y2="25.4" width="0.1524" layer="91"/>
 <pinref part="GND4" gate="1" pin="GND"/>
-<wire x1="76.2" y1="33.02" x2="76.2" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="91.44" y1="25.4" x2="91.44" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SCL" class="0">
@@ -9415,13 +9414,13 @@ for I2C operation</text>
 <wire x1="139.7" y1="109.22" x2="162.56" y2="109.22" width="0.1524" layer="91"/>
 <junction x="139.7" y="109.22"/>
 <pinref part="R1" gate="G$1" pin="1"/>
-<pinref part="U2" gate="G$1" pin="SCL/SPC"/>
+<pinref part="U1" gate="G$1" pin="SCL/SPC"/>
 <wire x1="129.54" y1="109.22" x2="139.7" y2="109.22" width="0.1524" layer="91"/>
 <label x="162.56" y="109.22" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
-<wire x1="53.34" y1="22.86" x2="50.8" y2="22.86" width="0.1524" layer="91"/>
-<label x="50.8" y="22.86" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="58.42" y1="33.02" x2="55.88" y2="33.02" width="0.1524" layer="91"/>
+<label x="55.88" y="33.02" size="1.27" layer="95" rot="MR0" xref="yes"/>
 <pinref part="J1" gate="G$1" pin="4"/>
 </segment>
 </net>
@@ -9431,37 +9430,37 @@ for I2C operation</text>
 <wire x1="154.94" y1="106.68" x2="162.56" y2="106.68" width="0.1524" layer="91"/>
 <junction x="154.94" y="106.68"/>
 <pinref part="R2" gate="G$1" pin="1"/>
-<pinref part="U2" gate="G$1" pin="SDA/SDI"/>
+<pinref part="U1" gate="G$1" pin="SDA/SDI"/>
 <wire x1="129.54" y1="106.68" x2="154.94" y2="106.68" width="0.1524" layer="91"/>
 <label x="162.56" y="106.68" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
-<wire x1="53.34" y1="25.4" x2="50.8" y2="25.4" width="0.1524" layer="91"/>
-<label x="50.8" y="25.4" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="58.42" y1="30.48" x2="55.88" y2="30.48" width="0.1524" layer="91"/>
+<label x="55.88" y="30.48" size="1.27" layer="95" rot="MR0" xref="yes"/>
 <pinref part="J1" gate="G$1" pin="3"/>
 </segment>
 </net>
 <net name="INT2" class="0">
 <segment>
 <wire x1="129.54" y1="96.52" x2="134.62" y2="96.52" width="0.1524" layer="91"/>
-<pinref part="U2" gate="G$1" pin="INT2"/>
+<pinref part="U1" gate="G$1" pin="INT2"/>
 <label x="134.62" y="96.52" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
-<wire x1="93.98" y1="20.32" x2="91.44" y2="20.32" width="0.1524" layer="91"/>
-<label x="91.44" y="20.32" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="93.98" y1="38.1" x2="91.44" y2="38.1" width="0.1524" layer="91"/>
+<label x="91.44" y="38.1" size="1.27" layer="95" rot="MR0" xref="yes"/>
 <pinref part="J2" gate="G$1" pin="6"/>
 </segment>
 </net>
 <net name="INT1" class="0">
 <segment>
 <wire x1="129.54" y1="99.06" x2="134.62" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="U2" gate="G$1" pin="INT1"/>
+<pinref part="U1" gate="G$1" pin="INT1"/>
 <label x="134.62" y="99.06" size="1.27" layer="95" font="vector" xref="yes"/>
 </segment>
 <segment>
-<wire x1="93.98" y1="22.86" x2="91.44" y2="22.86" width="0.1524" layer="91"/>
-<label x="91.44" y="22.86" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="93.98" y1="35.56" x2="91.44" y2="35.56" width="0.1524" layer="91"/>
+<label x="91.44" y="35.56" size="1.27" layer="95" rot="MR0" xref="yes"/>
 <pinref part="J2" gate="G$1" pin="5"/>
 </segment>
 </net>
@@ -9473,12 +9472,12 @@ for I2C operation</text>
 <label x="156.718" y="104.394" size="1.27" layer="95"/>
 <pinref part="SJ1" gate="1" pin="2"/>
 <pinref part="R3" gate="G$1" pin="1"/>
-<pinref part="U2" gate="G$1" pin="SA0/SDO"/>
+<pinref part="U1" gate="G$1" pin="SA0/SDO"/>
 <wire x1="129.54" y1="104.14" x2="172.72" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="53.34" y1="20.32" x2="50.8" y2="20.32" width="0.1524" layer="91"/>
-<label x="50.8" y="20.32" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+<wire x1="58.42" y1="35.56" x2="55.88" y2="35.56" width="0.1524" layer="91"/>
+<label x="55.88" y="35.56" size="1.27" layer="95" font="vector" rot="MR0" xref="yes"/>
 <pinref part="J1" gate="G$1" pin="5"/>
 </segment>
 </net>
@@ -9500,7 +9499,7 @@ for I2C operation</text>
 </net>
 <net name="!CS" class="0">
 <segment>
-<pinref part="U2" gate="G$1" pin="!CS!/MODE"/>
+<pinref part="U1" gate="G$1" pin="!CS!/MODE"/>
 <wire x1="129.54" y1="111.76" x2="132.08" y2="111.76" width="0.1524" layer="91"/>
 <pinref part="R4" gate="G$1" pin="1"/>
 <wire x1="132.08" y1="111.76" x2="132.08" y2="121.92" width="0.1524" layer="91"/>
@@ -9510,8 +9509,8 @@ for I2C operation</text>
 <label x="124.46" y="121.92" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="53.34" y1="17.78" x2="50.8" y2="17.78" width="0.1524" layer="91"/>
-<label x="50.8" y="17.78" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+<wire x1="58.42" y1="38.1" x2="55.88" y2="38.1" width="0.1524" layer="91"/>
+<label x="55.88" y="38.1" size="1.27" layer="95" font="vector" rot="MR0" xref="yes"/>
 <pinref part="J1" gate="G$1" pin="6"/>
 </segment>
 </net>
@@ -9519,11 +9518,11 @@ for I2C operation</text>
 <segment>
 <wire x1="129.54" y1="91.44" x2="134.62" y2="91.44" width="0.1524" layer="91"/>
 <label x="134.62" y="91.44" size="1.27" layer="95" font="vector" xref="yes"/>
-<pinref part="U2" gate="G$1" pin="ADC1"/>
+<pinref part="U1" gate="G$1" pin="ADC1"/>
 </segment>
 <segment>
-<wire x1="93.98" y1="30.48" x2="91.44" y2="30.48" width="0.1524" layer="91"/>
-<label x="91.44" y="30.48" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+<wire x1="93.98" y1="27.94" x2="91.44" y2="27.94" width="0.1524" layer="91"/>
+<label x="91.44" y="27.94" size="1.27" layer="95" font="vector" rot="MR0" xref="yes"/>
 <pinref part="J2" gate="G$1" pin="2"/>
 </segment>
 </net>
@@ -9531,11 +9530,11 @@ for I2C operation</text>
 <segment>
 <wire x1="129.54" y1="88.9" x2="134.62" y2="88.9" width="0.1524" layer="91"/>
 <label x="134.62" y="88.9" size="1.27" layer="95" font="vector" xref="yes"/>
-<pinref part="U2" gate="G$1" pin="ADC2"/>
+<pinref part="U1" gate="G$1" pin="ADC2"/>
 </segment>
 <segment>
-<wire x1="93.98" y1="27.94" x2="91.44" y2="27.94" width="0.1524" layer="91"/>
-<label x="91.44" y="27.94" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+<wire x1="93.98" y1="30.48" x2="91.44" y2="30.48" width="0.1524" layer="91"/>
+<label x="91.44" y="30.48" size="1.27" layer="95" font="vector" rot="MR0" xref="yes"/>
 <pinref part="J2" gate="G$1" pin="3"/>
 </segment>
 </net>
@@ -9543,20 +9542,20 @@ for I2C operation</text>
 <segment>
 <wire x1="129.54" y1="86.36" x2="134.62" y2="86.36" width="0.1524" layer="91"/>
 <label x="134.62" y="86.36" size="1.27" layer="95" font="vector" xref="yes"/>
-<pinref part="U2" gate="G$1" pin="ADC3"/>
+<pinref part="U1" gate="G$1" pin="ADC3"/>
 </segment>
 <segment>
-<wire x1="93.98" y1="25.4" x2="91.44" y2="25.4" width="0.1524" layer="91"/>
-<label x="91.44" y="25.4" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
+<wire x1="93.98" y1="33.02" x2="91.44" y2="33.02" width="0.1524" layer="91"/>
+<label x="91.44" y="33.02" size="1.27" layer="95" font="vector" rot="MR0" xref="yes"/>
 <pinref part="J2" gate="G$1" pin="4"/>
 </segment>
 </net>
 <net name="VCC" class="0">
 <segment>
-<wire x1="53.34" y1="27.94" x2="38.1" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="58.42" y1="27.94" x2="45.72" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="J1" gate="G$1" pin="2"/>
 <pinref part="SUPPLY1" gate="G$1" pin="VCC"/>
-<wire x1="38.1" y1="27.94" x2="38.1" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="27.94" x2="45.72" y2="40.64" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
@@ -9585,9 +9584,9 @@ for I2C operation</text>
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="71.12" y1="111.76" x2="88.9" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="88.9" y1="111.76" x2="88.9" y2="109.22" width="0.1524" layer="91"/>
-<pinref part="U2" gate="G$1" pin="VDDIO"/>
+<pinref part="U1" gate="G$1" pin="VDDIO"/>
 <wire x1="88.9" y1="109.22" x2="93.98" y2="109.22" width="0.1524" layer="91"/>
-<pinref part="U2" gate="G$1" pin="VDD"/>
+<pinref part="U1" gate="G$1" pin="VDD"/>
 <wire x1="88.9" y1="111.76" x2="93.98" y2="111.76" width="0.1524" layer="91"/>
 <junction x="88.9" y="111.76"/>
 <junction x="71.12" y="111.76"/>
